@@ -1,0 +1,134 @@
+/* Part 2: CSS Properties, Selectors, and Rules */
+
+
+/* CSS Variables */
+
+:root {
+    --main-color: blue;
+    --font-size: 18px;
+    --container-width: 800px;
+    --container-height: 500px;
+    --table-cell-border-color: black;
+    --table-row-hover-color: lightblue;
+    --link-hover-color: green;
+}
+
+
+/* Custom font for all text */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* Heading styles */
+
+h1 {
+    color: var(--main-color);
+    font-size: var(--font-size);
+    text-align: center;
+}
+
+
+/* Background colors */
+
+.container {
+    background-color: lightgray;
+}
+
+table {
+    background-color: #f2f2f2;
+}
+
+
+/* Width and height for container div */
+
+.container {
+    width: var(--container-width);
+    height: var(--container-height);
+}
+
+
+/* Border around table cells */
+
+td {
+    border: 1px solid var(--table-cell-border-color);
+}
+
+
+/* Hover effect on table rows */
+
+tbody tr:hover {
+    background-color: var(--table-row-hover-color);
+}
+
+
+/* CSS selectors and specificity */
+
+
+/* Style the first list item */
+
+ul li:first-child {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Style the image */
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* Select and style table cells based on position */
+
+tbody tr td:first-child {
+    font-weight: bold;
+}
+
+thead th:last-child {
+    color: white;
+    background-color: gray;
+}
+
+
+/* Part 3: CSS Variables, Pseudo-classes, and Box Model */
+
+
+/* Styling links */
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+
+/* Adding decorative content with ::before pseudo-element */
+
+.container::before {
+    content: 'Decorative Content';
+    display: block;
+    background-color: yellow;
+    padding: 5px;
+    text-align: center;
+}
+
+
+/* Box model */
+
+.container {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+table {
+    margin-bottom: 20px;
+}
+
+p {
+    margin: 0;
+    padding: 10px;
+    border: 1px dashed gray;
+}
